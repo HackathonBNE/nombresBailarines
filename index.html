@@ -1,0 +1,72 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Nombres Hackathon BNE</title>
+</head>
+<body>
+  <h1 id="nombre"></h1>
+  <script>
+    var h1 = document.getElementById('nombre');
+    var nombres = {
+      ellos : [
+        'Ángel',
+        'Antonio',
+	'Francisco',
+	'Fernando',
+	'Julio',
+	'Rodrigo',
+	'Carlos',
+	'Víctor',
+	'David',
+	'Rafael',
+      ],
+      ellas : [
+        'Dolores',
+	'Conchita',
+	'Carmen',
+	'Rocío',
+	'Lucía',
+	'Manuela',
+	'Isabel', 
+	'Susana',
+	'Celia',
+	'Ana',
+	'Rosa',
+      ]
+    };
+    var apellidos = [
+      'Tuy',
+      'Bueu',
+      'Monforte',
+      'Vivero',
+      'Doriga',
+      'Suances',
+      'Goiain',
+      'Durango',
+      'Lasarte',
+      'Tafalla',
+      'Arnedo',
+      'Belchite',
+      'Sarrión',
+      'Mollerussa',
+      'Mahón',
+      'Alcoy',
+      'Betera',
+      'San Javier',
+      'Alhama',
+      'Torrenueva',
+      'Vélez',
+      'Lucena',
+      'Zafra',
+      'Colmenar',
+    ];
+    function getRandomElement(list) {
+      return list[Math.floor(list.length * Math.random())];
+    }
+    h1.innerHTML = Math.random() > .5 ? getRandomElement(nombres.ellos) : 
+                   getRandomElement(nombres.ellas);
+    h1.innerHTML += ' ';
+    h1.innerHTML += getRandomElement(apellidos);
+  </script>
+</body>
+</html>
